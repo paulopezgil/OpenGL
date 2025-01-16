@@ -1,1 +1,1 @@
-#OpenGL project Pau i Genís
+# OpenGL project Pau i Genís
