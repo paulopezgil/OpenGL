@@ -5,11 +5,14 @@ BUILD = build/
 
 all: $(BUILD)main.exe
 
-$(BUILD)main.exe: $(BUILD)main.o
-	g++ $(BUILD)main.o libs/GLFW/libglfw3.a -o $(BUILD)main.exe $(LINKFLAGS)
+$(BUILD)main.exe: $(BUILD)main.o $(BUILD)handleException.o libs/GLEW/libglew32.a libs/GLFW/libglfw3.a
+	g++ $(BUILD)main.o $(BUILD)handleException.o libs/GLEW/libglew32.a libs/GLFW/libglfw3.a -o $(BUILD)main.exe $(LINKFLAGS)
 
 $(BUILD)main.o: $(SRC)main.cc
 	g++ $(CXXFLAGS) $(SRC)main.cc -o $(BUILD)main.o
+
+$(BUILD)handleException.o: $(SRC)handleException.cc
+	g++ $(CXXFLAGS) $(SRC)handleException.cc -o $(BUILD)handleException.o
 
 clean:
 	if exist "$(BUILD)" del /F /Q "$(BUILD)\*.*"
