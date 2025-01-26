@@ -1,7 +1,6 @@
 #include "main.ih"
 
 int main(void)
-try
 {
     GLFWwindow* window;
 
@@ -20,15 +19,18 @@ try
     /* Make the window's context current */
     glfwMakeContextCurrent(window);
 
-    // Initialize glew
-    if (glewInit() != GLEW_OK)
-        throw std::runtime_error{ "not GLEW_OK" };
-
     /* Loop until the user closes the window */
     while (!glfwWindowShouldClose(window))
     {
         /* Render here */
         glClear(GL_COLOR_BUFFER_BIT);
+
+        // Draw a triangle
+        glBegin(GL_TRIANGLES);
+        glVertex2f(-0.5f, -0.5f);
+        glVertex2f(0.0f, 0.5f);
+        glVertex2f(0.5f, -0.5f);
+        glEnd();
 
         /* Swap front and back buffers */
         glfwSwapBuffers(window);
@@ -39,8 +41,4 @@ try
 
     glfwTerminate();
     return 0;
-}
-catch (...)
-{
-    handleException();
 }

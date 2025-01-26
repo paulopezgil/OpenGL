@@ -8,6 +8,5 @@
 // C++ Dependencies
 #include <iostream>
 #include <stdexcept>
-using namespace std;
 
 int handleException();

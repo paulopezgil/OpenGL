@@ -1,0 +1,7 @@
+// Dependecies
+#include <GLFW/glfw3.h>
+
+// C++ Dependencies
+#include <iostream>
+#include <stdexcept>
+using namespace std;
