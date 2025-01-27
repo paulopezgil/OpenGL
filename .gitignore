@@ -29,4 +29,6 @@
 *.exe
 *.out
 *.app
+
+# Visual studio
 *.code-workspace

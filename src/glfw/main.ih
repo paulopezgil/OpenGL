@@ -1,12 +1,7 @@
-// Preprocessor directives
-#define GLEW_STATIC
-
 // Dependecies
-#include <GLEW/glew.h>
 #include <GLFW/glfw3.h>
 
 // C++ Dependencies
 #include <iostream>
 #include <stdexcept>
-
-int handleException();
+using namespace std;

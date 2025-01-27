@@ -1,5 +1,7 @@
 # OpenGL project Pau i Genís
 
+Several programs are developed in C++ to try out OpenGL features.
+
 # Dependencies
 
 GLFW - provides a simple API for creating windows, contexts and surfaces, receiving input and events.
